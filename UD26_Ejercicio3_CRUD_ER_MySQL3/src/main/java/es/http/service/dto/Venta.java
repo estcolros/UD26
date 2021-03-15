@@ -43,7 +43,6 @@ public class Venta {
 	}
 
 	public Venta(int id, Cajero cajero, Maquina maquina, Producto producto) {
-		super();
 		this.id = id;
 		this.cajero = cajero;
 		this.maquina = maquina;

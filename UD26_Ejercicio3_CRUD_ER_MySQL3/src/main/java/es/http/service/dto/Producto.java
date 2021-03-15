@@ -38,7 +38,6 @@ public class Producto {
 	}
 
 	public Producto(int id, String nombre, int precio, List<Venta> venta) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;

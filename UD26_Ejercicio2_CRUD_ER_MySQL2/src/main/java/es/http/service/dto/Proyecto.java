@@ -42,7 +42,6 @@ public class Proyecto {
 	 */
 
 	public Proyecto(String id, String nombre, int horas, List<Asignado> asignado) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.horas = horas;

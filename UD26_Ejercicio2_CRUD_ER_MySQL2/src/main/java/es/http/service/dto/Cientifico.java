@@ -34,7 +34,6 @@ public class Cientifico {
 	}
 
 	public Cientifico(String dni, String nomapels, List<Asignado> asignado) {
-		super();
 		this.dni = dni;
 		this.nomapels = nomapels;
 		this.asignado = asignado;

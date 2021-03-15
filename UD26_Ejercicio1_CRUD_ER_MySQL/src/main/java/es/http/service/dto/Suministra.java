@@ -33,7 +33,6 @@ public class Suministra {
 	 * 
 	 */
 	public Suministra() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -45,7 +44,6 @@ public class Suministra {
 	 * @param precio
 	 */
 	public Suministra(int id, Proveedor proveedor, Pieza pieza, int precio) {
-		super();
 		this.id = id;
 		this.proveedor = proveedor;
 		this.pieza = pieza;

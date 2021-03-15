@@ -41,7 +41,6 @@ public class Cajero {
 	 */
 
 	public Cajero(int id, String nomapels, List<Venta> venta) {
-		super();
 		this.id = id;
 		this.nomapels = nomapels;
 		this.venta = venta;

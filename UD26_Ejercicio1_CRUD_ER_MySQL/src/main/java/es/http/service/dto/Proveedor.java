@@ -32,7 +32,6 @@ public class Proveedor {
 	 * 
 	 */
 	public Proveedor() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -42,7 +41,6 @@ public class Proveedor {
 	 * @param suministra
 	 */
 	public Proveedor(String id, String nombre, List<Suministra> suministra) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.suministra = suministra;

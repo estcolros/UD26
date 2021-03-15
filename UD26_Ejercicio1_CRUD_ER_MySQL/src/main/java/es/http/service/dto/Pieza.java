@@ -34,7 +34,6 @@ public class Pieza {
 	 * 
 	 */
 	public Pieza() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -44,7 +43,6 @@ public class Pieza {
 	 * @param suministra
 	 */
 	public Pieza(int id, String nombre, List<Suministra> suministra) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.suministra = suministra;

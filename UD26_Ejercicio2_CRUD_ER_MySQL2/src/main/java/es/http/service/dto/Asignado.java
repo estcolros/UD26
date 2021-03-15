@@ -31,7 +31,7 @@ public class Asignado {
 	}
 	
 	public Asignado(String id, Cientifico cientifico, Proyecto proyecto) {
-		super();
+
 		this.id = id;
 		this.cientifico = cientifico;
 		this.proyecto = proyecto;

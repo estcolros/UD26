@@ -35,7 +35,6 @@ public class Maquina {
 	}
 
 	public Maquina(int id, int piso, List<Venta> venta) {
-		super();
 		this.id = id;
 		this.piso = piso;
 		this.venta = venta;
