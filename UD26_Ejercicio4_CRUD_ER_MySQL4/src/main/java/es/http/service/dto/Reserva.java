@@ -1,4 +1,5 @@
 package es.http.service.dto;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "Reserva") // en caso que la tabala sea diferente
 public class Reserva {
 
-	// Atributos de entidad registro_curso
+	// Atributos de entidad reserva
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // busca ultimo valor e incrementa desde id final de db
 	private int id;
@@ -24,47 +25,19 @@ public class Reserva {
 	@ManyToOne
 	@JoinColumn(name = "dni")
 	Investigador investigador;
-	
+
 	@Column(name = "comienzo") // no hace falta si se llama igual
 	private String comienzo;
 	@Column(name = "fin") // no hace falta si se llama igual
 	private String fin;
-	
-	
+
 	// Constructores
 
 	public Reserva() {
 
 	}
 
-
-
-	public String getComienzo() {
-		return comienzo;
-	}
-
-
-
-	public void setComienzo(String comienzo) {
-		this.comienzo = comienzo;
-	}
-
-
-
-	public String getFin() {
-		return fin;
-	}
-
-
-
-	public void setFin(String fin) {
-		this.fin = fin;
-	}
-
-
-
 	public Reserva(int id, Equipos equipo, Investigador investigador, String comienzo, String fin) {
-		super();
 		this.id = id;
 		this.equipo = equipo;
 		this.investigador = investigador;
@@ -72,7 +45,22 @@ public class Reserva {
 		this.fin = fin;
 	}
 
+	// Getters y Setters
+	public String getComienzo() {
+		return comienzo;
+	}
 
+	public void setComienzo(String comienzo) {
+		this.comienzo = comienzo;
+	}
+
+	public String getFin() {
+		return fin;
+	}
+
+	public void setFin(String fin) {
+		this.fin = fin;
+	}
 
 	public int getId() {
 		return id;
@@ -98,12 +86,11 @@ public class Reserva {
 		this.investigador = investigador;
 	}
 
-
+	//Método ToString
 	@Override
 	public String toString() {
 		return "Reserva [id=" + id + ", equipo=" + equipo + ", investigador=" + investigador + ", comienzo=" + comienzo
 				+ ", fin=" + fin + "]";
-	}	
-	
-	
+	}
+
 }

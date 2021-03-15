@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "AsignadoA") // en caso que la tabala sea diferente
 public class Asignado {
 
-	// Atributos de entidad registro_curso
+	// Atributos de entidad AsignadoA
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // busca ultimo valor e incrementa desde id final de db
 	private String id;
@@ -29,7 +29,7 @@ public class Asignado {
 	public Asignado() {
 
 	}
-	
+
 	public Asignado(String id, Cientifico cientifico, Proyecto proyecto) {
 
 		this.id = id;
@@ -47,7 +47,6 @@ public class Asignado {
 		this.id = id;
 	}
 
-
 	public Cientifico getCientifico() {
 		return cientifico;
 	}
@@ -64,6 +63,7 @@ public class Asignado {
 		this.proyecto = proyecto;
 	}
 
+	// Método ToString
 	@Override
 	public String toString() {
 		return "Asignado [id=" + id + ", cientifico=" + cientifico + ", proyecto=" + proyecto + "]";

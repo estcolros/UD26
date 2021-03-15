@@ -49,6 +49,7 @@ public class Venta {
 		this.producto = producto;
 	}
 
+	// Getters y Setters
 	public Cajero getCajero() {
 		return cajero;
 	}
@@ -73,6 +74,7 @@ public class Venta {
 		this.producto = producto;
 	}
 
+	// Método ToString
 	@Override
 	public String toString() {
 		return "Venta [id=" + id + ", cajero=" + cajero + ", maquina=" + maquina + ", producto=" + producto + "]";

@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="Productos")
+@Table(name = "Productos")
 public class Producto {
 
 	// Atributos de entidad producto
@@ -44,12 +44,7 @@ public class Producto {
 		this.venta = venta;
 	}
 
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Venta")
-	public List<Venta> getVenta() {
-		return venta;
-	}
-
+	// Getters y Setters
 	public int getId() {
 		return id;
 	}
@@ -78,6 +73,13 @@ public class Producto {
 		this.venta = venta;
 	}
 
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Venta")
+	public List<Venta> getVenta() {
+		return venta;
+	}
+
+	// Método ToString
 	@Override
 	public String toString() {
 		return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", venta=" + venta + "]";

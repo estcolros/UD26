@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "Facultad") // en caso que la tabala sea diferente
 public class Facultad {
 
-	// Atributos de entidad curso
+	// Atributos de entidad facultad
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // busca ultimo valor e incrementa desde id final de db
 	private int id;
@@ -45,30 +45,13 @@ public class Facultad {
 	 */
 
 	public Facultad(int id, String nombre, List<Equipos> equipos, List<Investigador> investigadores) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.equipos = equipos;
 		this.investigadores = investigadores;
 	}
 
-	/**
-	 * @return the equipos
-	 */
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Equipos")
-	public List<Equipos> getEquipos() {
-		return equipos;
-	}
-
-	/**
-	 * @return the investigadores
-	 */
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Investigador")
-	public List<Investigador> getInvestigadores() {
-		return investigadores;
-	}
+	// Getters y Setters
 
 	public int getId() {
 		return id;
@@ -94,6 +77,25 @@ public class Facultad {
 		this.equipos = equipos;
 	}
 
+	/**
+	 * @return the equipos
+	 */
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Equipos")
+	public List<Equipos> getEquipos() {
+		return equipos;
+	}
+
+	/**
+	 * @return the investigadores
+	 */
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Investigador")
+	public List<Investigador> getInvestigadores() {
+		return investigadores;
+	}
+
+	// Método ToString
 	@Override
 	public String toString() {
 		return "Facultad [id=" + id + ", nombre=" + nombre + ", equipos=" + equipos + ", investigadores="

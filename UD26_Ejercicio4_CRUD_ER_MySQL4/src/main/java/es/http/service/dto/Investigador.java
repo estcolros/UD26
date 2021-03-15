@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "Investigadores") // en caso que la tabala sea diferente
 public class Investigador {
 
-	// Atributos de entidad estudiante
+	// Atributos de entidad investigadores
 	@Id
 	@Column(name = "dni") // no hace falta si se llama igual
 	private String dni;
@@ -39,22 +39,13 @@ public class Investigador {
 	}
 
 	public Investigador(String dni, String nomapels, Facultad facultad, List<Reserva> reserva) {
-		super();
 		this.dni = dni;
 		this.nomapels = nomapels;
 		this.facultad = facultad;
 		this.reserva = reserva;
 	}
 
-	/**
-	 * @return the reserva
-	 */
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Reserva")
-	public List<Reserva> getReserva() {
-		return reserva;
-	}
-
+	// Getters y Setters
 	public String getDni() {
 		return dni;
 	}
@@ -79,16 +70,24 @@ public class Investigador {
 		this.facultad = facultad;
 	}
 
-
 	public void setReserva(List<Reserva> reserva) {
 		this.reserva = reserva;
 	}
 
+	/**
+	 * @return the reserva
+	 */
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Reserva")
+	public List<Reserva> getReserva() {
+		return reserva;
+	}
+
+	// Método ToString
 	@Override
 	public String toString() {
 		return "Investigador [dni=" + dni + ", nomapels=" + nomapels + ", facultad=" + facultad + ", reserva=" + reserva
 				+ "]";
 	}
 
-	
 }

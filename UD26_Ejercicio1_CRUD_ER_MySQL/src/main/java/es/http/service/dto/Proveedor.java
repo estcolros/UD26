@@ -46,7 +46,7 @@ public class Proveedor {
 		this.suministra = suministra;
 	}
 
-	//Getters y Setters
+	// Getters y Setters
 	/**
 	 * @return the id
 	 */
@@ -91,7 +91,7 @@ public class Proveedor {
 		this.suministra = suministra;
 	}
 
-	//Método ToString
+	// Método ToString
 	@Override
 	public String toString() {
 		return "Proveedor [id=" + id + ", nombre=" + nombre + ", suministra=" + suministra + "]";

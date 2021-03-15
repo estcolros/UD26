@@ -40,12 +40,7 @@ public class Maquina {
 		this.venta = venta;
 	}
 
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Venta")
-	public List<Venta> getVenta() {
-		return venta;
-	}
-
+	// Getters y Setters
 	public int getPiso() {
 		return piso;
 	}
@@ -66,6 +61,13 @@ public class Maquina {
 		this.venta = venta;
 	}
 
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Venta")
+	public List<Venta> getVenta() {
+		return venta;
+	}
+
+	// Método ToString
 	@Override
 	public String toString() {
 		return "Maquina [id=" + id + ", piso=" + piso + ", venta=" + venta + "]";

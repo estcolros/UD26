@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "Cajeros") // en caso que la tabala sea diferente
 public class Cajero {
 
-	// Atributos de entidad curso
+	// Atributos de entidad Cajero
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // busca ultimo valor e incrementa desde id final de db
 	private int id;
@@ -46,15 +46,7 @@ public class Cajero {
 		this.venta = venta;
 	}
 
-	/**
-	 * @return the venta
-	 */
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Venta")
-	public List<Venta> getVenta() {
-		return venta;
-	}
-
+	//Getters y Setters
 	public int getId() {
 		return id;
 	}
@@ -75,6 +67,16 @@ public class Cajero {
 		this.venta = venta;
 	}
 
+	/**
+	 * @return the venta
+	 */
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Venta")
+	public List<Venta> getVenta() {
+		return venta;
+	}
+	
+	//Método ToString
 	@Override
 	public String toString() {
 		return "Cajero [id=" + id + ", nomapels=" + nomapels + ", venta=" + venta + "]";
